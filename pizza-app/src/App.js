@@ -22,7 +22,7 @@ const defaultValues = {
   topSausage: false,
   topMushrooms: false,
   topOlives: false,
-  special:"",
+  special: "",
 };
 
 const defaultErrors = {

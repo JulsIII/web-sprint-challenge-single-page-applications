@@ -60,8 +60,8 @@ Your finished project must include all of the following requirements:
 - [*] Validation for name - name must be at least 2 characters
 - [*] A dropdown for pizza size
 - [*] A checklist for toppings - at least 4 (hint: name each separately!)
-- [ ] Text input for special instructions
-- [ ] An Add to Order button that submits form and returns a database record of name, size, toppings and special instructions
+- [*] Text input for special instructions
+- [*] An Add to Order button that submits form and returns a database record of name, size, toppings and special instructions
 
 #### Testing MVP
 

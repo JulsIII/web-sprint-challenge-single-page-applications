@@ -68,7 +68,7 @@ export default function PizzaForm (props) {
               value={formValues.special}
               onChange={change}
             />
-            <p>{errors.name}</p> 
+            <p>{errors.special}</p> 
           </label>
 
           <label htmlFor="terms">
