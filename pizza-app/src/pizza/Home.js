@@ -7,11 +7,8 @@ export default function HomeStuff (props) {
     return (
       <div className='movie-card' onClick={() => history.push(`/pizza/PizzaForm`)}>
         <h2>{title}</h2>
-        <div className='movie-director'>
-          Director: <em>{director}</em>
-        </div>
         <div className='movie-metascore'>
-          Metascore: <strong>{metascore}</strong>
+          <strong>BTN TO GOTO PIZZA FORM</strong>
         </div>
       </div>
     );
