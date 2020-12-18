@@ -17,6 +17,12 @@ const defaultValues = {
   email: "",
   password: "",
   terms: false,
+  pizzaSize: "",
+  topPepperoni: false,
+  topSausage: false,
+  topMushrooms: false,
+  topOlives: false,
+  special:"",
 };
 
 const defaultErrors = {
@@ -58,6 +64,9 @@ function App() {
     name: formValues.name.trim(),
     email: formValues.email.trimEnd(),
     password: formValues.name.trim(),
+    pizzaSize: formValues.name.trimEnd(),
+    special: formValues.name.trim(),
+    //add toppings
   };
   setSavedUserInfo([...savedUserInfo, newData]); 
   setFormValues(defaultValues);
@@ -94,7 +103,7 @@ useEffect(() => {
         {/* <Route path='/pizza'>
          <Confirm />
         </Route> */}
-        {/* <UserList tList={savedUserInfo} key={savedUserInfo.id}/> */}
+        <UserList tList={savedUserInfo} key={savedUserInfo.id}/>
     </div>
   );
 }

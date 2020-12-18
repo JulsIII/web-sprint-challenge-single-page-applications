@@ -7,6 +7,8 @@ export default function UserList(props) {
             <div key={id}>
                 <h2>{tMember.name}</h2>
                 <h2>{tMember.email}</h2>
+                <h2>{tMember.pizzaSize}</h2>
+                {/* add topping and special info */}
             </div>
         ))
     }</div>
