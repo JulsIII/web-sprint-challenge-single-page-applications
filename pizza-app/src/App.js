@@ -49,7 +49,7 @@ function App() {
     .post("https://reqres.in/api/users", formValues)
     .then((res) => {
       setSavedUserInfo([res.data, ...savedUserInfo]);
-    console.log(res.data);
+    console.log('POST DATA LOG', res.data);
   }).catch((err) => {
     console.log(err);
     debugger;
@@ -57,7 +57,6 @@ function App() {
 
   const newData = {
     name: formValues.name.trim(),
-    pizzaSize: formValues.name.trimEnd(),
     special: formValues.name.trim(),
   };
 

@@ -6,15 +6,13 @@ describe("Pizza Ordering App", () => {
 });
  
    const textInput = () => cy.get('input[name="name"]');
-   const emailInput = () => cy.get('input[name="email"]');
-   const passwordInput = () => cy.get('input[name="password"]');
    const pizzaSizeInput = () => cy.get('#pizza-size');
    const termsCheckbox = () => cy.get('input[name="terms"]');
    const topPepperoniCB = () => cy.get('input[name="topPepperoni"]');
    const submitButton = () => cy.get("#submitBtn");
    const specialInput = () => cy.get('input[name="special"]');
   
-   it("Test Text Boxes - Open Pizza Form Before Test Ends! or Error", () => {
+   it("Test Text Boxes - OPEN FORM B4 TEST ENDS TO PASS TEST!", () => {
 
        textInput()
        .should("have.value", "")
@@ -28,7 +26,7 @@ describe("Pizza Ordering App", () => {
 
    });
  
-   it("Select Multiple Toppings - Open Pizza Form Before Test Ends or Error!", () => {
+   it("Select Multiple Toppings - OPEN FORM B4 TEST ENDS TO PASS TEST!", () => {
 
      topPepperoniCB().uncheck({ force: true})
      topPepperoniCB().check({ force: true})
@@ -39,7 +37,7 @@ describe("Pizza Ordering App", () => {
    });
  
   
-    it("Check to see if a user can submit the form - Open Pizza Form Before Test Ends or Error!", () => {
+  it("Check to see if a user can submit the form - OPEN FORM B4 TEST ENDS TO PASS TEST!", () => {
 
   submitButton().should("be.disabled");
  
@@ -48,11 +46,11 @@ describe("Pizza Ordering App", () => {
 
   pizzaSizeInput().select('Large');
 
-  termsCheckbox().uncheck({ force: true});
-  termsCheckbox().check({ force: true});
-
   topPepperoniCB().uncheck({ force: true});
   topPepperoniCB().check({ force: true});
+
+  termsCheckbox().uncheck({ force: true});
+  termsCheckbox().check({ force: true});
 
   specialInput()
   .clear()

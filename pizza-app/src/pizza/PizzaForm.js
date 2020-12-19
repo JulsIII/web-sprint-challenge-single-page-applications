@@ -19,26 +19,26 @@ export default function PizzaForm (props) {
      
           <label htmlFor="pizzaSize">
             Pizza Size
-            <select id="pizza-size" type="text" value={formValues.pizzaSize} onChange={change}>
+            <select id="pizza-size" name="pizzaSize" value={formValues.pizzaSize} onChange={change}>
             <option value="">------select size------</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
           </select>
           </label>
 
         <p>
         <label htmlFor="topPepperoni">
-          Pepperoni<input type="checkbox" name="topPepperoni" checked={formValues.topPepperoni} onChange={change}/> 
+          <input type="checkbox" name="topPepperoni" checked={formValues.topPepperoni} onChange={change}/>Pepperoni 
         </label>
         <label htmlFor="topSausage">
-          Sausage<input type="checkbox" name="topSausage" checked={formValues.topSausage} onChange={change}/> 
+          <input type="checkbox" name="topSausage" checked={formValues.topSausage} onChange={change}/>Sausage 
         </label>
         <label htmlFor="topMushrooms">
-          Mushrooms<input type="checkbox" name="topMushrooms" checked={formValues.topMushrooms} onChange={change}/> 
+          <input type="checkbox" name="topMushrooms" checked={formValues.topMushrooms} onChange={change}/>Mushrooms 
         </label>
         <label htmlFor="topOlives">
-         Olives<input type="checkbox" name="topOlives" checked={formValues.topOlives} onChange={change}/> 
+         <input type="checkbox" name="topOlives" checked={formValues.topOlives} onChange={change}/>Olives 
         </label>
         </p>
 
@@ -54,10 +54,9 @@ export default function PizzaForm (props) {
           </label>
 
           <label htmlFor="terms">
-          Agree to Terms<input type="checkbox" name="terms" onChange={change}/> 
+          <input type="checkbox" name="terms" onChange={change}/> Agree to Terms
         </label>
-
-          <button id='submitBtn' disabled={buttonDisabled}>Order!</button>
+         <p><button id='submitBtn' disabled={buttonDisabled}>Order!</button></p>
         </form>
       </div>
     );
