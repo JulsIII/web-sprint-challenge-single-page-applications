@@ -14,7 +14,7 @@ describe("Pizza Ordering App", () => {
    const submitButton = () => cy.get("#submitBtn");
    const specialInput = () => cy.get('input[name="special"]');
   
-   it("Test Text Boxes - Open Pizza Form Before Test Ends!", () => {
+   it("Test Text Boxes - Open Pizza Form Before Test Ends! or Error", () => {
 
        textInput()
        .should("have.value", "")
@@ -28,7 +28,7 @@ describe("Pizza Ordering App", () => {
 
    });
  
-   it("Select Multiple Toppings - Open Pizza Form Before Test Ends!", () => {
+   it("Select Multiple Toppings - Open Pizza Form Before Test Ends or Error!", () => {
 
      topPepperoniCB().uncheck({ force: true})
      topPepperoniCB().check({ force: true})
@@ -39,18 +39,12 @@ describe("Pizza Ordering App", () => {
    });
  
   
-    it("Check to see if a user can submit the form - Open Pizza Form Before Test Ends!", () => {
+    it("Check to see if a user can submit the form - Open Pizza Form Before Test Ends or Error!", () => {
 
   submitButton().should("be.disabled");
  
   textInput().clear();
   textInput().type("Namey McNameface");
-
-  emailInput().clear();
-  emailInput().type("amIdoing@thisright.com");
-
-  passwordInput().clear();
-  passwordInput().type("password1234");
 
   pizzaSizeInput().select('Large');
 

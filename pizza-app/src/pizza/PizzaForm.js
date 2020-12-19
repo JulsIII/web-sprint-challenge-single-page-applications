@@ -16,27 +16,7 @@ export default function PizzaForm (props) {
             />
             <p>{errors.name}</p> 
           </label>
-          <label htmlFor="email">
-            Email
-            <input
-              type="email"
-              name="email"
-              value={formValues.email}
-              onChange={change}
-            /> 
-           <p>{errors.email}</p>         
-          </label>
-          <label htmlFor="email">
-            Password
-            <input
-              type="password"
-              name="password"
-              value={formValues.password}
-              onChange={change}
-            />   
-            <p>{errors.password}</p>        
-          </label>
-
+     
           <label htmlFor="pizzaSize">
             Pizza Size
             <select id="pizza-size" type="text" value={formValues.pizzaSize} onChange={change}>
@@ -47,6 +27,7 @@ export default function PizzaForm (props) {
           </select>
           </label>
 
+        <p>
         <label htmlFor="topPepperoni">
           Pepperoni<input type="checkbox" name="topPepperoni" checked={formValues.topPepperoni} onChange={change}/> 
         </label>
@@ -59,6 +40,7 @@ export default function PizzaForm (props) {
         <label htmlFor="topOlives">
          Olives<input type="checkbox" name="topOlives" checked={formValues.topOlives} onChange={change}/> 
         </label>
+        </p>
 
         <label htmlFor="special">
             Special Instructions

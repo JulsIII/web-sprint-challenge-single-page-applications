@@ -13,8 +13,6 @@ import formSchema from './validation/formSchema'
 
 const defaultValues = {
   name: "",
-  email: "",
-  password: "",
   terms: false,
   pizzaSize: "",
   topPepperoni: false,
@@ -26,8 +24,6 @@ const defaultValues = {
 
 const defaultErrors = {
   name: '',
-  email: '',
-  password: '',
 }
 
 function App() {
@@ -61,8 +57,6 @@ function App() {
 
   const newData = {
     name: formValues.name.trim(),
-    email: formValues.email.trimEnd(),
-    password: formValues.name.trim(),
     pizzaSize: formValues.name.trimEnd(),
     special: formValues.name.trim(),
   };
