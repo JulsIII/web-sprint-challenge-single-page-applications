@@ -5,10 +5,8 @@ export default function UserList(props) {
         <div>{
             tList.map((tMember, id) => (
             <div key={id}>
-                <h2>{tMember.name}</h2>
-                <h2>{tMember.email}</h2>
-                <h2>{tMember.pizzaSize}</h2>
-                {/* add topping and special info */}
+                <h2>Congrats, {tMember.name}!</h2>
+                <h2>Pizza is on it's way!</h2>
             </div>
         ))
     }</div>
