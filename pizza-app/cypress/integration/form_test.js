@@ -9,6 +9,7 @@ describe("Pizza Ordering App", () => {
    const pizzaSizeInput = () => cy.get('#pizza-size');
    const termsCheckbox = () => cy.get('input[name="terms"]');
    const topPepperoniCB = () => cy.get('input[name="topPepperoni"]');
+   const topMushroomsCB = () => cy.get('input[name="topMushrooms"]');
    const submitButton = () => cy.get("#submitBtn");
    const specialInput = () => cy.get('input[name="special"]');
   
@@ -31,6 +32,12 @@ describe("Pizza Ordering App", () => {
      topPepperoniCB().uncheck({ force: true})
      topPepperoniCB().check({ force: true})
      topPepperoniCB()
+       .should('be.visible')
+       .should('be.checked')
+
+     topMushroomsCB().uncheck({ force: true})
+     topMushroomsCB().check({ force: true})
+     topMushroomsCB()
        .should('be.visible')
        .should('be.checked')
        
