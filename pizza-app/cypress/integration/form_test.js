@@ -1,16 +1,13 @@
 
-describe("User Onboarding App", () => {
+describe("Pizza Ordering App", () => {
    
     beforeEach(() => {
       cy.visit("http://localhost:3000");
 });
  
    const textInput = () => cy.get('input[name="name"]');
-
-
    const emailInput = () => cy.get('input[name="email"]');
    const passwordInput = () => cy.get('input[name="password"]');
-
    const pizzaSizeInput = () => cy.get('#pizza-size');
    const termsCheckbox = () => cy.get('input[name="terms"]');
    const topPepperoniCB = () => cy.get('input[name="topPepperoni"]');

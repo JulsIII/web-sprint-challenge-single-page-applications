@@ -2,11 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Nav from './pizza/Nav';
 import Home from './pizza/Home';
 import PizzaForm from './pizza/PizzaForm';
-//import Confirm from './pizza/Confirm';
 import UserList from "./pizza/FormData";
 import * as yup from 'yup'
 import formSchema from './validation/formSchema'
@@ -34,7 +33,7 @@ const defaultErrors = {
 function App() {
 
   const [formValues, setFormValues] = useState(defaultValues);
-  const [savedUserInfo, setSavedUserInfo] = useState([]); //users state
+  const [savedUserInfo, setSavedUserInfo] = useState([]); 
   const [errors, setErrors] = useState(defaultErrors); 
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
@@ -66,8 +65,8 @@ function App() {
     password: formValues.name.trim(),
     pizzaSize: formValues.name.trimEnd(),
     special: formValues.name.trim(),
-    //add toppings
   };
+
   setSavedUserInfo([...savedUserInfo, newData]); 
   setFormValues(defaultValues);
 };
@@ -98,16 +97,12 @@ useEffect(() => {
           <Home />
         </Route>
         <Route path='/pizza'>
-         <PizzaForm formValues={formValues} change={change} submit={submit} buttonDisabled={buttonDisabled} errors={errors} />
+          <PizzaForm formValues={formValues} change={change} submit={submit} buttonDisabled={buttonDisabled} errors={errors} />
         </Route>
-        {/* <Route path='/pizza'>
-         <Confirm />
-        </Route> */}
-        <UserList tList={savedUserInfo} key={savedUserInfo.id}/>
+    
+      <UserList tList={savedUserInfo} key={savedUserInfo.id}/>
     </div>
   );
 }
 
-//movies={movieList}
-//exact
 export default App;
