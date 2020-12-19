@@ -39,7 +39,7 @@ export default function PizzaForm (props) {
 
           <label htmlFor="pizzaSize">
             Pizza Size
-            <select name="pizzaSize" type="text" value={formValues.pizzaSize} onChange={change}>
+            <select id="pizza-size" type="text" value={formValues.pizzaSize} onChange={change}>
             <option value="">------select size------</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>

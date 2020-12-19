@@ -7,7 +7,7 @@ export default yup.object().shape({
     .email("Please Enter A Vaild Email Address")
     .required("Please Enter An Email Address"),
   password: yup.string().required("Please Enter A Password"),
-  pizzaSize: yup.string().required("Please Enter Role"),
+  //pizzaSize: yup.string().required("Please Enter Role"),
   topPepperoni: yup.boolean(),//.oneOf([true], "Please Agree To Terms"),
   topSausage: yup.boolean(),//.oneOf([true], "Please Agree To Terms"),
   topMushrooms: yup.boolean(),//.oneOf([true], "Please Agree To Terms"),
